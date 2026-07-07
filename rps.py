@@ -15,10 +15,18 @@ while True:
     #jogo começa:
     print("Vamos jogar pedra papel tesoura! ")
     computador = random.randrange(3)
-    jogador = int(input("ESCOLHA: 0 - PEDRA | 1 - PAPEL | 2 - TESOURA "))
+    jogador = int(input("ESCOLHA: 0 - PEDRA | 1 - PAPEL | 2 - TESOURA | 5 - SAIR "))
 
-    print(f"Você jogou: {jogador}. Computador jogou: {computador}.")
-
+    print(f"Você escolheu: {jogador}.")
+  
+  #SAÍDA
+    if jogador == 5:
+        print("Obrigado por jogar!. Tchau!")
+        break    
+       
+     
+    print(f"Computador jogou: {computador}")
+#JOGO  
     if jogador == computador:
         print("EMPATE!")
     elif jogador == 0 and computador == 2:
@@ -27,9 +35,10 @@ while True:
         print("voce venceu")
     elif jogador == 1 and computador == 0:
         print("você venceu")
+    elif jogador >= 3:
+        print(" jogador, escolhe somente de 0 a 2!")
     else:
         print("PERDEU!")
-        
        
         
 
