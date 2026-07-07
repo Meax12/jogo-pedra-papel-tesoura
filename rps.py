@@ -1,6 +1,13 @@
+from datetime import datetime
 import random
 
 while True:
+    meses = [
+        "janeiro", "fevereiro", "março", "abril", "maio" , "junho", "julho", "agosto", "setembro", "novembro", "dezembro"
+    ]
+
+    data_hora = datetime.now()
+    print(f"{data_hora.day} de {meses[data_hora.month-1]} de {data_hora}")
     print("Vamos jogar pedra papel tesoura! ")
     computador = random.randrange(3)
     jogador = int(input("ESCOLHA: 0 - PEDRA | 1 - PAPEL | 2 - TESOURA "))
